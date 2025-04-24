@@ -1,13 +1,10 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --background: #1B1924;
+  --foreground: #fff;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+
+  --light-background: #E1DEEF;
+  --light-foreground: #333333;
 }
 
 html,
@@ -22,6 +19,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  &.is-light {
+    background: var(--light-background);
+    color: var(--light-foreground);
+  }
 }
 
 * {
