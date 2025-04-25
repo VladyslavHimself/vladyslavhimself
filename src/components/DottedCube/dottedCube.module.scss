@@ -1,0 +1,19 @@
+.dotted-cube {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    width: 90px;
+    height: 80px;
+
+
+    padding: 5px;
+
+    .dotted-cube-item {
+        width: 3px;
+        height: 3px;
+        background: rgba(86, 86, 86, 0.5);
+        margin: 7px;
+    }
+}

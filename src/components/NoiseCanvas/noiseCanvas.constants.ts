@@ -7,7 +7,7 @@ const colors = {
 
 const themes: Themes  = {
     dark: {
-        density: 0.02,
+        density: 0.015,
         colorFn: () => 0xff000000,
     },
     light: {

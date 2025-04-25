@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import React from "react";
 import NoiseCanvas from "@/components/NoiseCanvas/NoiseCanvas";
+import {LinesCanvas} from "@/components/LinesCanvas/LinesCanvas";
+import DecorativeLayout from "@/components/DecorativeLayout/DecorativeLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,6 +30,8 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <NoiseCanvas type="dark" />
+        <LinesCanvas />
+        <DecorativeLayout />
         {children}
       </body>
     </html>
