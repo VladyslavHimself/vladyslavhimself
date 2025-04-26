@@ -24,6 +24,15 @@ body {
     background: var(--light-background);
     color: var(--light-foreground);
   }
+
+  .layout {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+     /* #TODO: Remove PE rule inside inner elements */
+    pointer-events: none;
+  }
 }
 
 * {

@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+
+    @media (width <= 650px) {
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    ul.navbar-navigation-list, ul.navbar-social-links {
+        list-style-type: none;
+        display: flex;
+        gap: 23px;
+
+        > li {
+            font-family: 'DIN Condensed', sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+        }
+    }
+
+    ul.navbar-navigation-list {
+        > li.navbar-burger { display: none; }
+        @media (width <= 650px) {
+            > li.navbar-burger { display: block; }
+            > li:not(.navbar-burger) { display: none; }
+        }
+    }
+}

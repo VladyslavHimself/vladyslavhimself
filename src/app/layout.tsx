@@ -17,7 +17,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "vladyslavhimself",
+  title: "Vladyslav Lutchyn | Frontend engineer",
   description: "Frontend developer from United States",
 };
 
@@ -29,10 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      {children}
+      <div className="layout">
         <NoiseCanvas type="dark" />
         <LinesCanvas />
         <DecorativeLayout />
-        {children}
+      </div>
       </body>
     </html>
   );
