@@ -1,3 +1,5 @@
+@use '@/styles/extenders/background-gradient';
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -16,6 +18,12 @@
             font-family: 'DIN Condensed', sans-serif;
             font-size: 24px;
             font-weight: 800;
+            transition: .2s ease-in-out;
+
+
+            &:hover {
+                filter: brightness(0.8);
+            }
         }
     }
 
@@ -24,6 +32,15 @@
         @media (width <= 650px) {
             > li.navbar-burger { display: block; }
             > li:not(.navbar-burger) { display: none; }
+        }
+
+        li.is-active {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            @extend %background-gradient;
+            background-size: 400% 400%;
+            animation: lavaFlow 15s ease infinite;
         }
     }
 
@@ -37,9 +54,21 @@
             left: 100%;
             transform: translate(-50%, -100%);
             height: 5px;
-            background: rgba(169, 136, 248, 0.07);
+            background: rgba(169, 136, 248, 0.04);
             width: 500%;
-            box-shadow: 0 0 50px #A988F8;
+            box-shadow: 0 0 90px #A988F8;
         }
+    }
+}
+
+@keyframes lavaFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
     }
 }

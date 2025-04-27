@@ -15,7 +15,7 @@ export default function Navbar() {
               <li className={styles["navbar-burger"]}>
                   <BurgerIcon />
               </li>
-              <li><Link href="#">Home</Link></li>
+              <li className={styles['is-active']}><Link href="#">Home</Link></li>
               <li><Link href="#">About me</Link></li>
               <li><Link href="#">Projects</Link></li>
               <li><Link href="#">Contacts</Link></li>
