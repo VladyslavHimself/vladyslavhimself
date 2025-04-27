@@ -5,6 +5,8 @@ import React from "react";
 import NoiseCanvas from "@/components/NoiseCanvas/NoiseCanvas";
 import {LinesCanvas} from "@/components/LinesCanvas/LinesCanvas";
 import DecorativeLayout from "@/components/DecorativeLayout/DecorativeLayout";
+import Providers from "@/Providers/Providers";
+import NavbarMenuContainer from "@/components/Navbar/NavbarMenuContainer/NavbarMenuContainer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,7 +31,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-      {children}
+      <Providers>
+          { children }
+          <NavbarMenuContainer />
+      </Providers>
+
       <div className="layout">
         <NoiseCanvas type="dark" />
         <LinesCanvas />

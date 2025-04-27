@@ -5,15 +5,14 @@ import GithubIcon from "@/icons/GithubIcon";
 import LinkedInIcon from "@/icons/LinkedInIcon";
 import TelegramIcon from "@/icons/TelegramIcon";
 import InstagramIcon from "@/icons/InstagramIcon";
-import BurgerIcon from "@/icons/BurgerIcon";
+import BurgerButton from "@/components/Navbar/BurgerButton/BurgerButton";
 
 export default function Navbar() {
-
     return (
         <div className={styles['navbar']}>
           <ul className={styles['navbar-navigation-list']}>
               <li className={styles["navbar-burger"]}>
-                  <BurgerIcon />
+                  <BurgerButton />
               </li>
               <li className={styles['is-active']}><Link href="#">Home</Link></li>
               <li><Link href="#">About me</Link></li>
