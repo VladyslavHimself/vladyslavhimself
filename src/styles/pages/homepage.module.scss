@@ -1,5 +1,149 @@
+$navbar-height: 93.5px;
+
 .homepage {
   width: 100%;
-  height: 100vh;
+  height: calc(100vh - $navbar-height);
   padding: 26px 40px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+
+  .hero-introduction {
+    font-family: 'Futura PT', sans-serif;
+    transform: translateY(-$navbar-height);
+    color: #f4f4f4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .hero-introduction-description {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: fit-content;
+      box-sizing: content-box;
+
+      &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        top: 60%;
+        transform: translateY(-60%);
+        height: 280px;
+        left: 0;
+        background: url("../../../public/logotype.svg") no-repeat center center;
+        background-size: contain;
+        z-index: -1;
+      }
+
+      h2 {
+        font-size: 24px;
+        font-weight: 600;
+      }
+
+      h1 {
+        font-size: 64px;
+        font-weight: 800;
+      }
+
+      button { margin-top: 20px; }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -100%);
+        height: 5px;
+        width: 100%;
+        background: rgba(169, 136, 248, 0.04);
+        box-shadow: 0 0 90px #A988F8;
+        pointer-events: none;
+      }
+    }
+    }
+
+    .hero-introduction-logo {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > svg {
+        position: absolute;
+      }
+
+      .hero-introduction-logo-react-icon {
+        animation: rotation 10s infinite linear;
+      }
+
+      .hero-introduction-logo-tech-stack-orbit {
+        animation: rotation 7s infinite reverse linear;
+      }
+      }
+
+}
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 900px) {
+  .homepage {
+    .hero-introduction {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 80vh;
+      transform: translateY(0) !important;
+
+      .hero-introduction-description {
+        align-items: center;
+        text-align: center;
+      }
+
+      .hero-introduction-logo {
+        margin-top: 50px;
+      }
+    }
+  }
+}
+
+@media (width < 500px) {
+  .homepage {
+    overflow: hidden;
+    .hero-introduction {
+      .hero-introduction-description {
+        width: 100%;
+        align-items: flex-start;
+        text-align: start;
+
+        h2 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        h1 {
+          font-size: 26px;
+          font-weight: 800;
+        }
+
+       &::before { height: 190px; }
+      }
+
+      .hero-introduction-logo {
+        transform: translate(-40%, 0%) !important;
+      }
+    }
+  }
 }

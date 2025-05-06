@@ -1,0 +1,62 @@
+@import '@/styles/colors.constants.scss';
+
+$sizes: (
+  small: (width: 155px, height: 50px),
+  medium: (width: 220px, height: 54px),
+  large: (width: 385px, height: 62px)
+);
+
+$accent-color-button-fallback: #DF5D61;
+$accent-color-button-gradient: linear-gradient(to right, #DF5D61 0%, #ff464c 41%, #ff3939 73%, #DF5D61 100%);
+$accent-text-color: #fff;
+
+$types: (
+        primary: (
+                color: $accent-color-button-gradient,
+                fallbackColor: $accent-color-button-fallback,
+                textColor: $accent-text-color,
+        ),
+        secondary: (
+          color: $main-gradient
+        )
+);
+
+
+.button {
+  border-radius: 12px;
+  border: none;
+  transition: background-position .3s ease;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Futura', sans-serif;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover { background-position: right center; }
+
+  @each $size-name, $size-values in $sizes {
+    &[data-size="#{$size-name}"] {
+      width: map-get($size-values, width);
+      height: map-get($size-values, height);
+    }
+  }
+
+  @each $type-name, $color in $types {
+    &[data-type="#{$type-name}"] {
+      background: map-get($color, fallbackColor);
+      background: map-get($color, color);
+      background-position: left center;
+      background-size: 200% auto;
+      color: map-get($color, textColor);
+      transition: .2s ease;
+
+      &:hover { background-position: right center; }
+      &:active {
+        filter: brightness(0.9);
+        background-size: 100% auto;
+      }
+    }
+  }
+}

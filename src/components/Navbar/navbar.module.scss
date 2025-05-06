@@ -1,8 +1,9 @@
-@use '@/styles/extenders/background-gradient';
+@import '@/styles/colors.constants';
 
 .navbar {
     display: flex;
     justify-content: space-between;
+    padding: 26px 40px;
 
     @media (width <= 650px) {
         justify-content: flex-start;
@@ -35,10 +36,10 @@
         }
 
         li.is-active {
+            background: $main-gradient;
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            @extend %background-gradient;
             background-size: 400% 400%;
             animation: lavaFlow 15s ease infinite;
         }

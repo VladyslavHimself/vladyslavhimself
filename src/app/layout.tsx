@@ -7,6 +7,7 @@ import {LinesCanvas} from "@/components/LinesCanvas/LinesCanvas";
 import DecorativeLayout from "@/components/DecorativeLayout/DecorativeLayout";
 import Providers from "@/Providers/Providers";
 import NavbarMenuContainer from "@/components/Navbar/NavbarMenuContainer/NavbarMenuContainer";
+import Navbar from "@/components/Navbar/Navbar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +33,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
       <Providers>
-          { children }
+          <>
+              <Navbar />
+              { children }
+          </>
+
           <NavbarMenuContainer />
       </Providers>
 
