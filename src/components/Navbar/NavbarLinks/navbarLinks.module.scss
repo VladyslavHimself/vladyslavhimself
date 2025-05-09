@@ -1,0 +1,10 @@
+@import '@/styles/colors.constants';
+
+li.navbar-links-is-active {
+        background: $main-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400% 400%;
+        animation: lavaFlow 15s ease infinite;
+}

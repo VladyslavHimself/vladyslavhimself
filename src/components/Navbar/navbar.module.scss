@@ -35,14 +35,7 @@
             > li:not(.navbar-burger) { display: none; }
         }
 
-        li.is-active {
-            background: $main-gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-size: 400% 400%;
-            animation: lavaFlow 15s ease infinite;
-        }
+
     }
 
     // TODO: Make block shadow as function to be reusable

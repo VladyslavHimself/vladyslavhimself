@@ -6,6 +6,7 @@ import LinkedInIcon from "@/icons/LinkedInIcon";
 import TelegramIcon from "@/icons/TelegramIcon";
 import InstagramIcon from "@/icons/InstagramIcon";
 import BurgerButton from "@/components/Navbar/BurgerButton/BurgerButton";
+import NavbarLinks from "@/components/Navbar/NavbarLinks/NavbarLinks";
 
 export default function Navbar() {
     return (
@@ -14,10 +15,7 @@ export default function Navbar() {
               <li className={styles["navbar-burger"]}>
                   <BurgerButton />
               </li>
-              <li className={styles['is-active']}><Link href="#">Home</Link></li>
-              <li><Link href="#">About me</Link></li>
-              <li><Link href="#">Projects</Link></li>
-              <li><Link href="#">Contacts</Link></li>
+              <NavbarLinks />
           </ul>
 
         <ul className={styles["navbar-social-links"]}>
