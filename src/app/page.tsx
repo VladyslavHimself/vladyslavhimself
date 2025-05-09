@@ -4,12 +4,14 @@ import Button from "@/ui/Button/Button";
 import ReactLogoIcon from "@/icons/ReactLogoIcon";
 import TechStackOrbit from "@/icons/TechStackOrbit";
 import DownloadIcon from "@/icons/DownloadIcon";
+import InfinityProjectsLine from "@/components/InfinityProjectsLine/InfinityProjectsLine";
 
 // TODO: CONVERT ALL TEXT INTO REM & EM.
 
 export default function HomePage() {
   return (
     <div className={styles['homepage']}>
+        <div></div>
         <div className={styles['hero-introduction']}>
             <div className={styles['hero-introduction-description']}>
                 <h2>Hi, I&#39;m Vladyslav</h2>
@@ -24,6 +26,7 @@ export default function HomePage() {
                 <TechStackOrbit className={styles['hero-introduction-logo-tech-stack-orbit']} />
             </div>
         </div>
+        <InfinityProjectsLine />
     </div>
   );
 }

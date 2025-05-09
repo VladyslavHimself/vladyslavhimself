@@ -1,0 +1,59 @@
+@import '@/styles/colors.constants';
+
+$animation-duration: 10s;
+
+.infinity-projects-line {
+  padding: 0 25px;
+  height: calc(var(--ipl-height) * 1.5);
+  min-width: var(--ipl-width);
+
+
+
+  .infinity-projects-line-list {
+    position: relative;
+
+    display: flex;
+    width: inherit;
+    height: inherit;
+
+
+    overflow: hidden;
+    font-family: 'Futura', sans-serif;
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: var(--ipl-height);
+
+    mask-image: linear-gradient(to right, transparent, rgb(0, 0, 0), transparent);
+
+    &:hover .infinity-projects-line-list-item-container {
+      animation-play-state: paused;
+    }
+
+    .infinity-projects-line-list-item-container {
+      position: absolute;
+      top: 0;
+      left: 100%;
+
+      animation: slide $animation-duration linear infinite;
+      animation-delay: calc(($animation-duration / var(--ipl-quantity)) * (var(--ipli-index) - 1));
+    }
+
+    .infinity-projects-line-item {
+      min-width: max-content;
+      cursor: pointer;
+
+      background: $main-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@keyframes slide {
+  from {
+    left: 100%;
+  } to {
+      left: calc(var(--ipl-width) * -1);
+    }
+}

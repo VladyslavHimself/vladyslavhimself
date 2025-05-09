@@ -6,13 +6,12 @@ $navbar-height: 93.5px;
   padding: 26px 40px;
 
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: space-between;
 
 
   .hero-introduction {
     font-family: 'Futura PT', sans-serif;
-    transform: translateY(-$navbar-height);
     color: #f4f4f4;
     display: flex;
     justify-content: space-between;
