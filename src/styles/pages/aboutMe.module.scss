@@ -1,0 +1,93 @@
+@import '@/styles/general.constants';
+@import '@/styles/colors.constants';
+
+.about-me-page {
+  width: 100%;
+  height: calc(100vh - $navbar-height);
+  padding: 0px 40px;
+
+  display: flex;
+
+  .about-me-description {
+    //border: 1px solid red;
+    width: 100%;
+    padding-right: 30px;
+
+    .about-me-description-general {
+      .about-me-description-general-header {
+        font-family: 'Futura', sans-serif;
+        font-size: 48px;
+
+        // TODO: Make this text background rules as mixin or function and remove duplicates;
+        background: $main-gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+       p {
+        margin-top: 20px;
+        font-family: 'Futura', sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+      }
+
+      .about-me-description-general-strengths-container {
+        display: flex;
+        justify-content: space-between;
+        flex: 1 0 100%;
+        padding: 15px 20px 0 0;
+
+        .about-me-description-general-strengths-item {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+
+          text-align: center;
+          font-family: 'Futura', sans-serif;
+          font-size: 16px;
+
+          width: 313px;
+          height: 223px;
+          padding: 0 10px;
+
+          background: #14131B;
+
+          border: 1px solid #9B87F3;
+          border-radius: 15px;
+
+          svg {
+          margin-bottom: 25px;
+          }
+        }
+      }
+    }
+
+  }
+
+  .about-me-experience {
+    //border: 1px solid blue;
+    width: 450px;
+    height: 100%;
+
+    .about-me-experience-mercurian-background {
+      width: 400px;
+      height: 100%;
+      position: absolute;
+      left: 100%;
+      top: 0;
+      transform: translateX(-100%);
+      z-index: -1;
+
+
+      .about-me-experience-mercurian-background-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background: rgba(183, 195, 254, 0.55);
+
+      }
+    }
+  }
+}

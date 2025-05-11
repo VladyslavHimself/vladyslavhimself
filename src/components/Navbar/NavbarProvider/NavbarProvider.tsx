@@ -14,8 +14,6 @@ type NavbarActions = {
 const NavbarStateContext = React.createContext<null|NavbarState>(null);
 const NavbarActionsContext= React.createContext<null|NavbarActions>(null);
 
-
-
 export default function NavbarProvider({ children }: React.PropsWithChildren) {
     const [isBurgerMenuOpen, setIsBurgerMenuOpen] = React.useState<boolean>(false);
 

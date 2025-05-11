@@ -1,5 +1,3 @@
-@import '@/styles/colors.constants';
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -14,6 +12,7 @@
         list-style-type: none;
         display: flex;
         gap: 23px;
+        z-index: 100;
 
         > li {
             font-family: 'DIN Condensed', sans-serif;
