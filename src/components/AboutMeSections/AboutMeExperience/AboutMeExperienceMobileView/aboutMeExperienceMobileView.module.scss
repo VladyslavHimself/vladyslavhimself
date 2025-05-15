@@ -1,0 +1,76 @@
+.about-me-experience-mobile-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+    .about-me-experience-mobile-view-title {
+        font-family: 'Futura', sans-serif;
+        color: #83AECF;
+        font-size: 28px;
+        font-weight: 800;
+        text-transform: uppercase;
+
+        display: flex;
+        align-items: center;
+        margin: 25px 0 15px 0;
+
+        > svg {
+            margin-left: 15px;
+        }
+    }
+
+    .about-me-experience-mobile-view-container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+
+        padding-top: 93px;
+
+        .about-me-experience-mercurian-background {
+            width: 100vw;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: calc(100vw - 40px);
+            transform: translateX(-100%);
+            z-index: -1;
+
+            .about-me-experience-mercurian-background-container {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                background: rgba(183, 195, 254, 0.55);
+            }
+        }
+    }
+
+    .about-me-experience-header {
+        font-family: 'Futura', sans-serif;
+        font-size: 40px;
+        font-weight: 800;
+        text-transform: uppercase;
+        color: #16141D;
+        text-align: right;
+    }
+
+    .about-me-experience-list {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        margin-top: 20px;
+        overflow: auto;
+
+        > div:not(:first-child) {
+            margin-top: 15px;
+        }
+
+
+    }
+}

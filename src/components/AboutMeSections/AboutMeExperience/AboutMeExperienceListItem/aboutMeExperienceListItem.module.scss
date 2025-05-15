@@ -1,0 +1,29 @@
+.about-me-experience-list-item {
+    width: 90%;
+    min-height: 100px;
+    color: #1B1924;
+
+    .about-me-experience-list-item-header {
+        position: relative;
+        font-family: 'Futura', sans-serif;
+        font-weight: 800;
+        font-size: 21px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        overflow: hidden;
+    }
+
+    .about-me-experience-list-item-text {
+        min-height: inherit;
+        margin-top: 15px;
+        font-family: 'Futura', sans-serif;
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+        padding-right: 25px;
+        margin-right: 10px;
+        border-right: 2px solid rgba(255, 255, 255, 0.5);
+    }
+}
