@@ -6,19 +6,22 @@ import React from "react";
 import {experienceMetadata} from "@/components/AboutMeSections/AboutMeExperience/experienceMetadata.constants";
 import AboutMeExperienceListItem
     from "@/components/AboutMeSections/AboutMeExperience/AboutMeExperienceListItem/AboutMeExperienceListItem";
+import Link from "next/link";
 
 export default function AboutMeExperienceMobileView() {
     return (
         <div className={styles['about-me-experience-mobile-view']}>
-            <div className={styles["about-me-experience-mobile-view-title"]}>
-                Experience <ArrowDownIcon />
-            </div>
+            <Link href="#experience" passHref>
+                <div className={styles["about-me-experience-mobile-view-title"]}>
+                    Experience <ArrowDownIcon/>
+                </div>
+            </Link>
             <div className={styles["about-me-experience-mobile-view-container"]}>
-                <div className={styles["about-me-experience-header"]}>Experience</div>
+                <div className={styles["about-me-experience-header"]} id="experience">Experience</div>
                 <div className={styles["about-me-experience-list"]}>
                     {
-                        experienceMetadata.map(({ title, description })=> (
-                            <AboutMeExperienceListItem key={title} title={title} description={description} />
+                        experienceMetadata.map(({title, description}) => (
+                            <AboutMeExperienceListItem key={title} title={title} description={description}/>
                         ))
                     }
                 </div>
