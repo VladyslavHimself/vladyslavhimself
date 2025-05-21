@@ -1,21 +1,16 @@
 import styles from '@/styles/pages/contacts.module.scss';
-import Input from "@/ui/Input/Input";
-import Button from "@/ui/Button/Button";
 import SendEmailIcon from "@/icons/SendEmailIcon";
 import PhoneIcon from "@/icons/PhoneIcon";
+import ContactsForm from "@/components/ContactsForm/ContactsForm";
 
 export default function ContactsPage() {
+
     return (
         <div className={styles["contacts-page"]}>
             <div className={styles["contacts-form"]}>
                <div>
                    <div className={styles["contacts-title"]}>Share your ideas</div>
-                   <form>
-                       <Input placeholder="Fullname" />
-                       <Input placeholder="Email" />
-                       <textarea placeholder="Your proposition (optional)" />
-                       <Button size="medium" type="primary">Send</Button>
-                   </form>
+                   <ContactsForm />
                </div>
 
                 <div className={styles["contacts-links"]}>

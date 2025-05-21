@@ -6,8 +6,8 @@ type Props = PropsWithChildren<{
     type: 'primary' | 'secondary'
 }>;
 
-const Button = React.forwardRef<HTMLButtonElement, Props>(({ children, type, size, ...props}) => {
-    return <button className={styles.button} data-size={size} data-type={type} {...props}>{children}</button>;
+const Button = React.forwardRef<HTMLButtonElement, Props>(({ children, type, size, ...props}, ref) => {
+    return <button ref={ref} className={styles.button} data-size={size} data-type={type} {...props}>{children}</button>;
 });
 
 Button.displayName = "Button";
