@@ -1,0 +1,71 @@
+@import '@/styles/colors.constants';
+@import '@/styles/general.constants';
+
+.projects-page {
+  width: 100%;
+  height: calc(100vh - $navbar-height);
+  display: flex;
+  padding: 26px 40px;
+
+  .projects-left-section {
+    flex: 1 0 40%;
+
+    .projects-title {
+      max-width: 470px;
+      font-family: 'Futura', sans-serif;
+      font-size: 21px;
+      font-weight: 800;
+
+      background: $main-gradient;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+    }
+
+    .projects-description {
+      margin-top: 20px;
+      max-width: 470px;
+
+      font-family: 'Futura', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+
+      padding: 0 20px;
+
+      border-left: 2px solid #FFFFFF7F;
+      border-radius: 1px;
+    }
+  }
+
+
+  .projects-right-section {
+    flex: 1 0 60%;
+
+    .projects-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      a:nth-child(1) {
+        .project-list-items-bg {
+          background: url("../../../public/projectTileC11.png") no-repeat;
+        }
+      }
+
+      a:nth-child(2) {
+        .project-list-items-bg {
+          background: url("../../../public/projectTileSonsenim.png") no-repeat;
+        }
+      }
+
+      a:nth-child(3) {
+        .project-list-items-bg {
+          background: url("../../../public/projectTileMetamorphosa.png") no-repeat;
+        }
+      }
+    }
+  }
+}
+
