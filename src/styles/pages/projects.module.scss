@@ -10,6 +10,10 @@
   .projects-left-section {
     flex: 1 0 40%;
 
+    @media screen and (max-width: 850px) {
+      display: none
+    }
+
     .projects-title {
       max-width: 470px;
       font-family: 'Futura', sans-serif;
@@ -73,6 +77,28 @@
           background: url("../../../public/projectTileMetamorphosa.png") no-repeat;
           background-size: contain;
         }
+      }
+    }
+
+
+    a:nth-child(1) {
+      .project-list-items-mobile-bg {
+        background: url("../../../public/projectTileC11Mobile.png") no-repeat;
+        background-size: contain;
+      }
+    }
+
+    a:nth-child(2) {
+      .project-list-items-mobile-bg {
+        background: url("../../../public/projectTileSonsenimMobile.png") no-repeat;
+        background-size: contain;
+      }
+    }
+
+    a:nth-child(3) {
+      .project-list-items-mobile-bg {
+        background: url("../../../public/projectTileMetamorphosaMobile.png") no-repeat;
+        background-size: contain;
       }
     }
   }

@@ -1,7 +1,5 @@
 import styles from '@/styles/pages/projects.module.scss';
-import ProjectsListItem from "@/components/ProjectsListItem/ProjectsListItem";
-import {showcases} from "@/constants/showcases.constants";
-import Link from "next/link";
+import ProjectsList from "@/components/ProjectsList/ProjectsList";
 
 
 export default function ProjectsPage() {
@@ -20,17 +18,7 @@ export default function ProjectsPage() {
 
 
             <div className={styles["projects-right-section"]}>
-                <div className={styles["projects-list"]}>
-                    {
-                        showcases.map(({title, description, link}) => (
-                            <Link key={title} href={link} passHref>
-                                <ProjectsListItem title={title} description={description} link={link}
-                                                  contentClasses={styles['project-list-items-bg']}
-                                />
-                            </Link>
-                        ))
-                    }
-                </div>
+                <ProjectsList />
             </div>
         </div>
     );

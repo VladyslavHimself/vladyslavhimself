@@ -1,16 +1,9 @@
 import styles from './projectsListItem.module.scss';
 import React from "react";
+import {ProjectListItemTypes} from "@/components/ProjectsListItem/projectListItem.types";
 
-type Props = {
-    title: string,
-    description: string,
-    link: string,
-    contentClasses: keyof typeof styles
-}
-
-export default function ProjectsListItem({ title, description, contentClasses }: Props) {
+export default function ProjectsListItem({title, description, contentClasses}: ProjectListItemTypes) {
     return (
-
         <div className={styles["projects-list-item"]}>
             <div className={`${styles[`projects-list-item-content`]} ${contentClasses}`}>
                 <div className={styles["projects-list-item-title"]}>
