@@ -48,21 +48,30 @@
       align-items: center;
 
 
+      @media screen and (max-width: 1035px) {
+        .project-list-items-bg {
+          width: 70%;
+        }
+      }
+
       a:nth-child(1) {
         .project-list-items-bg {
           background: url("../../../public/projectTileC11.png") no-repeat;
+          background-size: contain;
         }
       }
 
       a:nth-child(2) {
         .project-list-items-bg {
           background: url("../../../public/projectTileSonsenim.png") no-repeat;
+          background-size: contain;
         }
       }
 
       a:nth-child(3) {
         .project-list-items-bg {
           background: url("../../../public/projectTileMetamorphosa.png") no-repeat;
+          background-size: contain;
         }
       }
     }
