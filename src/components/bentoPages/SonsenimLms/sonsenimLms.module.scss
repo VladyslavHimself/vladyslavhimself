@@ -104,11 +104,8 @@
 
   transition: transform 0.5s ease;
 
-  //.is-transformed {
-
   transform-style: preserve-3d;
   box-shadow: 20px 20px 30px rgba(227, 227, 227, 0.2);
-  //}
 
   animation: main-content-appearance 3s ease forwards;
 

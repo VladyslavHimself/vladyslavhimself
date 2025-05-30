@@ -1,0 +1,28 @@
+@import "@/styles/colors.constants";
+
+.projects-entity-page-info-additional-section {
+  flex: 1 1 50%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+
+  .projects-entity-page-info-additional-section-title {
+    font-family: 'Futura', sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    color: #676767;
+  }
+
+  .projects-entity-page-info-additional-section-stack {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  > button {
+    margin-top: 35px;
+    align-self: flex-end;
+  }
+}
