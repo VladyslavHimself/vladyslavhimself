@@ -2,6 +2,9 @@ import reactLogoIcon from '../assets/techIcons/reactLogo.png';
 import reactQueryIcon from '../assets/techIcons/reactQueryLogo.png';
 import javaSpringIcon from '../assets/techIcons/javaSpringBoot.png';
 import postgreSqlicon from '../assets/techIcons/postgreSql.png';
+import nextJsIcon from '../assets/techIcons/nextJs.png';
+import nodeJsIcon from '../assets/techIcons/nodeJs.png';
+import shadcdnIcon from '../assets/techIcons/shadCdn.png';
 import {StaticImageData} from "next/image";
 
 export const showcases = [
@@ -73,3 +76,47 @@ export const sonsenimLMSProjectEntity = {
     ]
 }
 
+
+// TODO: Move techStack predefined objects outside to make them reusable
+export const cElevenProjectEntity = {
+    title: 'C11',
+    primaryText: 'A wallpaper service, where user can upload his wallpapers, or explore community to find new one.',
+    secondaryText: 'This project was a collaboration with a colleague who developed the backend. My responsibilities included creating the design and front-end.',
+    sourceLink: '#',
+    techStack: [
+        {
+            name: 'Next.js',
+            img: nextJsIcon,
+            width: 63,
+            height: 63
+        },
+
+        {
+            name: 'shadCDN',
+            img: shadcdnIcon,
+            width: 61,
+            height: 59,
+        },
+
+        {
+            name: 'Node.js',
+            img: nodeJsIcon,
+            width: 54,
+            height: 61
+        },
+        {
+            name: 'PostgreSQL',
+            img: postgreSqlicon,
+            width: 48,
+            height: 48
+        }
+    ],
+}
+
+export const metamorphosaProjectEntity = {
+    title: 'Metamorphosa',
+    primaryText: '',
+    secondaryText: '',
+    sourceLink: '#',
+    techStack: [],
+}
