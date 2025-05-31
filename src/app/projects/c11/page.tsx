@@ -5,12 +5,12 @@ import ProjectsEntityMainSectionDescription
 import {cElevenProjectEntity} from "@/constants/showcases.constants";
 import ProjectsEntityAdditionalSectionDescription
     from "@/components/ProjectsEntity/ProjectsEntityAdditionalSectionDescription/ProjectsEntityAdditionalSectionDescription";
-import SonsenimLms from "@/components/bentoPages/SonsenimLms/SonsenimLms";
+import CEleven from "@/components/bentoPages/CEleven/CEleven";
 
 export default function CElevenProjectPage() {
     return (
         <div className={styles['projects-entity-page']}>
-            <SonsenimLms />
+            <CEleven />
             <div className={styles["projects-entity-page-info"]}>
                 <ProjectsEntityMainSectionDescription projectEntity={cElevenProjectEntity} />
                 <ProjectsEntityAdditionalSectionDescription projectEntity={cElevenProjectEntity} />

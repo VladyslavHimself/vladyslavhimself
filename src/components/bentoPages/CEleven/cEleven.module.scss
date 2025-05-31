@@ -1,0 +1,202 @@
+.c-eleven-bento-page {
+  position: relative;
+  width: 550px;
+  min-height: 350px;
+  border-radius: 25px;
+  align-self: center;
+  background: #000;
+
+  display: flex;
+  animation: main-content-appearance 3s ease forwards;
+
+  .c-eleven-sidebar {
+    width: 93px;
+    height: 100%;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 11px 9px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .c-eleven-profile {
+      position: relative;
+      top: 0;
+      left: 0;
+
+      width: 80px;
+      height: 30px;
+      background-color: #101010;
+      border-radius: 9px;
+
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 6px 6px;
+
+
+      animation: profileLevitation ease 2s forwards;
+      @keyframes profileLevitation {
+        to {
+          top: -20px;
+          left: -20px;
+        }
+      }
+
+      .c-eleven-user-avatar {
+        display: flex;
+        align-items: center;
+      }
+
+      .c-eleven-user-info {
+        text-wrap: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 7px;
+        width: 70%;
+      }
+    }
+
+    .c-eleven-navigation {
+      flex: 1;
+      width: 100%;
+      margin-top: 11px;
+
+      .c-eleven-navigation-item {
+        position: relative;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 21px;
+        padding: 6px;
+
+        border-radius: 6px;
+        font-size: 7px;
+
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+
+        &:nth-child(1) {
+          background-color: #202020;
+
+          animation: levitation ease 3s forwards;
+
+          @keyframes levitation {
+            to {
+              top: -10px;
+              left: -10px;
+            }
+          }
+        }
+      }
+    }
+
+    .c-eleven-logo {
+      justify-self: flex-end;
+    }
+  }
+
+  .c-eleven-content {
+    display: flex;
+    flex: 1;
+    padding: 11px 5px;
+    flex-direction: column;
+
+    .c-eleven-header {
+      display: flex;
+      gap: 5px;
+      font-size: 7px;
+
+      .c-eleven-searchbar {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        width: 185px;
+        height: 25px;
+        padding: 5px 10px;
+        border-radius: 9px;
+        background-color: #101010;
+        color: #808080;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .c-eleven-search-button {
+        width: 47px;
+        height: 24px;
+        border-radius: 8px;
+        background-color: rgba(204, 204, 204, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        color: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .c-eleven-section {
+      margin-top: 15px;
+
+      .c-eleven-section-title {
+        font-weight: bold;
+      }
+
+      .c-eleven-section-images {
+        margin-top: 10px;
+        display: flex;
+        gap: 10px;
+
+        > img {
+          box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        > .is-highlighted {
+          position: relative;
+          top: 0;
+          left: 0;
+          animation: levitation ease-in-out 4s forwards;
+
+          @keyframes levitation {
+            to {
+              top: -30px;
+              left: -30px;
+            }
+          }
+        }
+      }
+
+      .c-eleven-explore-button {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        width: 40px;
+        height: 50px;
+        padding: 3px;
+        text-align: center;
+        align-self: center;
+        font-size: 7px;
+        border-radius: 8px;
+        background-color: #101010;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+
+  box-shadow: 12px 12px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+@keyframes main-content-appearance {
+  from {
+    opacity: 0;
+    transform: perspective(2500px) rotateX(55deg) rotateY(0deg) rotateZ(40deg);
+  } to {
+      opacity: 1;
+      transform: perspective(2500px) rotateX(55deg) rotateY(0deg) rotateZ(45deg);
+    }
+}
