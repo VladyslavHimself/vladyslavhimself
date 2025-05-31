@@ -5,6 +5,8 @@ import postgreSqlicon from '../assets/techIcons/postgreSql.png';
 import nextJsIcon from '../assets/techIcons/nextJs.png';
 import nodeJsIcon from '../assets/techIcons/nodeJs.png';
 import shadcdnIcon from '../assets/techIcons/shadCdn.png';
+import auth0Icon from '../assets/techIcons/authZero.png';
+import reactNativeIcon from '../assets/techIcons/reactNative.png';
 import {StaticImageData} from "next/image";
 
 export const showcases = [
@@ -115,8 +117,41 @@ export const cElevenProjectEntity = {
 
 export const metamorphosaProjectEntity = {
     title: 'Metamorphosa',
-    primaryText: '',
-    secondaryText: '',
+    primaryText: 'A mobile sports diary app designed to track and analyze your physical activity.',
+    secondaryText: 'This is my personal project, which focuses on an intelligent way to increase users\' power and muscle mass. It consists of offering freedom of choice, analyzing approaches, and finding the best solution for each individual.',
     sourceLink: '#',
-    techStack: [],
+    techStack: [
+        {
+
+            name: 'Java Spring Boot',
+            img: javaSpringIcon,
+            width: 47,
+            height: 47,
+        },
+        {
+            name: 'PostgreSQL',
+            img: postgreSqlicon,
+            width: 48,
+            height: 48
+        },
+        {
+            name: 'React Native',
+            img: reactNativeIcon,
+            width: 52,
+            height: 52,
+        },
+        {
+            name: 'React Query',
+            img: reactQueryIcon,
+            width: 51,
+            height: 45,
+        },
+
+        {
+            name: 'Auth0',
+            img: auth0Icon,
+            width: 52,
+            height: 55,
+        },
+    ],
 }

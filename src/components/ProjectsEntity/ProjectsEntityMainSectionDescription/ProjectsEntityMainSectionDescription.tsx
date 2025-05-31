@@ -11,9 +11,9 @@ export default function ProjectsEntityMainSectionDescription({ projectEntity }: 
 
     return (
         <div className={styles["projects-entity-page-info-main-section"]}>
-            <div className={styles["project-info-main-section-title"]}>
+            <h1 className={styles["project-info-main-section-title"]}>
                 {title}
-            </div>
+            </h1 >
 
             <div className={styles["projects-info-main-section-description"]}>
                 <p className={styles["projects-info-main-section-description-primary-text"]}>

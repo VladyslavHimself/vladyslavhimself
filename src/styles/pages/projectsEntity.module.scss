@@ -12,5 +12,61 @@
 
   .projects-entity-page-info {
     display: flex;
+
+    @media screen and (max-width: 670px) {
+      flex-direction: column;
+    }
+  }
+
+  .projects-entity-page-info-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-right: 50px;
+
+    @media (max-width: 980px) {
+      display: block;
+
+      h1 {
+        font-size: 36px;
+      }
+    }
+
+
+    + div {
+      position: relative;
+      top: -40px;
+      left: 0;
+      display: flex;
+      flex: 1 0 50%;
+      justify-content: center;
+      animation: main-content-appearance 3s ease forwards;
+
+      width: 314px;
+      height: 664px;
+
+
+      // TODO: Move to separate file
+      @keyframes main-content-appearance {
+        from {
+          opacity: 0;
+          left: 50px;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.is-horizontal {
+    flex-direction: row;
+    justify-content: flex-start;
+    overflow: auto;
+
+    @media (max-width: 980px) {
+      flex-direction: column;
+
+    }
   }
 }
